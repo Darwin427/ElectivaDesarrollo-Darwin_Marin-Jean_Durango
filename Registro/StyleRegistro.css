@@ -1,0 +1,194 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #C6FFF3; /* Fondo pastel azul */
+}
+
+/* Contenedor principal */
+.registro-wrapper {
+    display: flex;
+    width: 80%;
+    height: 95vh;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Contenedor del formulario */
+.registro-container {
+    width: 40%;
+    background: linear-gradient(135deg, #07D9B2, #30E6C4); /* Azul pastel */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+    transform-origin: left center; /* Punto de crecimiento */
+}
+
+.registro-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de los campos */
+.form-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Inputs */
+.registro-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Contenedor de los botones */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px; /* Separa los botones de los campos */
+}
+
+/* Estilos generales de los botones */
+.registro-container button {
+    width: 90%;
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* Botón "Registrarme" */
+#registrarButton {
+    background-color: #0FB9A1;
+    color: white;
+    margin-bottom: 10px; /* Separación con el botón "Regresar" */
+}
+
+#registrarButton:hover {
+    background-color: #0AA890;
+}
+
+/* Botón "Regresar" */
+#regresarButton {
+    background-color: #f44336;
+    color: white;
+}
+
+#regresarButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Ajuste en la animación del formulario */
+.registro-container:hover .button-container {
+    width: 100%;
+}
+
+.registro-container:hover button {
+    width: 95%;
+}
+
+
+/* Contenedor de la imagen */
+.registro-image {
+    width: 60%;
+    background: url('../Img/Fondo-Login.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Selección de género */
+.genero {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Mayor separación entre los iconos */
+    margin-top: 20px; /* Separación del último campo */
+    margin-bottom: 20px; /* Espacio antes del botón */
+}
+
+.genero label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.genero input[type="radio"] {
+    display: none; /* Ocultar el input de radio */
+}
+
+.genero img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 15px;
+    transition: all 0.3s;
+}
+
+/* Cambio de borde cuando está seleccionado */
+.genero input:checked + img {
+    border-color: #FFD700; /* Amarillo dorado cuando está seleccionado */
+}
+
+/* Ajustar el tamaño al crecer */
+.registro-container:hover .genero img {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+/* Animación de agrandamiento */
+.registro-container:hover {
+    transform: scaleX(1.2); /* Solo crece hacia la derecha */
+    width: 50%;
+}
+
+/* Ajustar los elementos al crecimiento del contenedor */
+.registro-container:hover .form-container {
+    width: 100%;
+}
+
+.registro-container:hover input,
+.registro-container:hover button,
+.registro-container:hover .genero img {
+    width: 95%;
+}
+
+/* 📌 Ajustar la imagen mientras el formulario se agranda */
+.registro-wrapper:hover .registro-image {
+    flex-basis: 50%; /* Ajuste proporcional dinámico */
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 🛠 Corrección final para evitar desajustes en la imagen */
+.registro-container:hover ~ .registro-image {
+    flex-basis: 50%;
+    width: 50%;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}

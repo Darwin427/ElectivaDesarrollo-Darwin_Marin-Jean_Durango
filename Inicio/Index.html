@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stilo LK - Spa & Uñas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="logo">
+            <img src="../Img/LogoLK.png" alt="Logo del SPA">
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#nuestros-servicios">Servicios</a></li>
+                <li><a href="#cita">Pedir Cita</a></li>
+                <li><a href="#dueñas">Nuestras Dueñas</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                <li><a href="../Login/Login.html">Login</a></li>  <!-- Enlace al login -->
+                <li><a href="#register" class="btn-register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrusel -->
+<section class="carousel">
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <img src="../Img/Manicura-Carrusel.png" class="carousel-item active">
+            <img src="../Img/Facial-Carrusel.png" class="carousel-item">
+            <img src="../Img/Pedicura-Carrusel.png" class="carousel-item">
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-btn" onclick="changeSlide(0)"></button>
+            <button class="carousel-btn" onclick="changeSlide(1)"></button>
+            <button class="carousel-btn" onclick="changeSlide(2)"></button>
+        </div>
+    </div>
+</section>
+
+    <!-- Sección Nuestros Servicios -->
+    <section id="nuestros-servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-container">
+            <div class="servicio">
+                <img src="../Img/Imagen-ManicuraPedicura.png" alt="Manicura y Pedicura">
+                <h3>Manicura y Pedicura</h3>
+                <p>Embellece tus uñas con nuestros tratamientos profesionales.</p>
+                <button>Más información</button>
+            </div>
+            <div class="servicio">
+                <img src="../Img/Imagen-Maquillaje.png" alt="Maquillaje">
+                <h3>Maquillaje</h3>
+                <p>Resalta tu belleza con maquillaje para cualquier ocasión.</p>
+                <button>Más información</button>
+            </div>
+            <div class="servicio">
+                <img src="../Img/Imagen-Peluqueria.png" alt="Peluquería">
+                <h3>Peluquería</h3>
+                <p>Los mejores cortes, tintes y peinados para ti.</p>
+                <button>Más información</button>
+            </div>
+            <div class="servicio">
+                <img src="../Img/Imagen-Faciales.png" alt="Facial">
+                <h3>Facial</h3>
+                <p>Tratamientos para el cuidado y rejuvenecimiento de la piel.</p>
+                <button>Más información</button>
+            </div>
+            <div class="servicio">
+                <img src="../Img/Imagen-Masajes.png" alt="Masajes">
+                <h3>Masajes</h3>
+                <p>Relájate con nuestros masajes terapéuticos y de relajación.</p>
+                <button>Más información</button>
+            </div>
+            <div class="servicio">
+                <img src="../Img/Imagen-Suertoterapia.png" alt="Sueroterapia">
+                <h3>Sueroterapia</h3>
+                <p>Mejora tu salud y bienestar con nuestras terapias intravenosas.</p>
+                <button>Más información</button>
+            </div>
+        </div>
+    </section>
+
+<!-- Sección Pedir Cita -->
+<section id="cita">
+    <h2>Pedir Cita</h2>
+    <form>
+        <!-- Nombre y Apellido en la misma línea -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="documento">Documento:</label>
+                <input type="int" id="Documento" required>
+            </div>
+        </div>
+
+        <!-- Email y Servicio en la misma línea -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="servicio">Servicio:</label>
+                <div class="custom-select">
+                    <select id="servicio">
+                        <option value="" disabled selected>Seleccione un servicio</option>
+                        <option value="manicura">Manicura y Pedicura</option>
+                        <option value="maquillaje">Maquillaje</option>
+                        <option value="peluqueria">Peluquería</option>
+                        <option value="facial">Facial</option>
+                        <option value="masajes">Masajes</option>
+                        <option value="sueroterapia">Sueroterapia</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fecha y Hora en la misma línea -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+            </div>
+        </div>
+
+        <!-- Botón de reserva -->
+        <button type="submit">Reservar Cita</button>
+    </form>
+</section>
+
+
+
+
+    <!-- Sección Nuestras Dueñas -->
+    <section id="dueñas">
+        <h2>Nuestras Dueñas</h2>
+        <div class="dueñas-container">
+            <div class="dueña">
+                <img src="../Img/Foto-NuestrasDueñas.png" alt="Dueña 1">
+                <h3>María González</h3>
+                <p>Fundadora y experta en cuidado de uñas. Apasionada por la belleza y el bienestar.</p>
+                <div class="social-links">
+                    
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <div class="dueña">
+                <img src="../Img/Foto-NuestrasDueñas.png" alt="Dueña 2">
+                <h3>Laura Pérez</h3>
+                <p>Especialista en spa y relajación. Su misión es brindar una experiencia única.</p>
+                <div class="social-links">
+                    
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección Nuestra Ubicación -->
+    <section id="ubicacion">
+        <h2>📍 Nuestra Ubicación</h2>
+        <div class="ubicacion-container">
+            <!-- Mapa -->
+            <div class="mapa">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093677!2d-122.41941548468142!3d37.77492977975953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e24c7b1a1d1%3A0x8f3db5a2d3b1e08c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1ses!2sco!4v1615934573216!5m2!1ses!2sco"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <!-- Datos de la ubicación -->
+            <div class="datos">
+                <h3>📌 Encuéntranos aquí</h3>
+                <p><strong>Dirección:</strong> Calle 123, Ciudad, País</p>
+                <p><strong>Teléfono:</strong> +123 456 7890</p>
+                <p><strong>Horario:</strong> Lunes - Sábado: 9:00 AM - 7:00 PM</p>
+                <p><strong>Email:</strong> contacto@tuspa.com</p>
+                <a href="https://www.google.com/maps?q=San+Francisco,+CA,+USA" target="_blank" class="btn-mapa">🗺️ Ver en Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Seccion preguntas frecuentes -->
+    <section id="preguntas-frecuentes">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq">
+                <div class="pregunta">¿Cuáles son los horarios del spa?</div>
+                <div class="respuesta">Estamos abiertos de lunes a sábado de 9:00 AM a 8:00 PM.</div>
+            </div>
+            <div class="faq">
+                <div class="pregunta">¿Necesito hacer una cita con anticipación?</div>
+                <div class="respuesta">Sí, recomendamos reservar con al menos 24 horas de anticipación.</div>
+            </div>
+            <div class="faq">
+                <div class="pregunta">¿Ofrecen paquetes o promociones?</div>
+                <div class="respuesta">Sí, tenemos paquetes especiales cada mes. Consulta en nuestra recepción.</div>
+            </div>
+            <div class="faq">
+                <div class="pregunta">¿Puedo cancelar o reprogramar mi cita?</div>
+                <div class="respuesta">Sí, puedes hacerlo con al menos 12 horas de anticipación sin costo adicional.</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="footer-container">
+            <!-- Columna Izquierda: Información del Spa -->
+            <div class="footer-info">
+                <h3>💆‍♀️ Spa & Uñas</h3>
+                <p>Relájate y déjanos consentirte con nuestros servicios de spa y belleza. ¡Tu bienestar es nuestra prioridad!</p>
+                <p><strong>Horario:</strong> Lunes a Sábado - 9:00 AM a 7:00 PM</p>
+                <p><strong>Teléfono:</strong> +123 456 789</p>
+                <p><strong>Email:</strong> contacto@spaunias.com</p>
+            </div>
+    
+            <!-- Línea Divisoria -->
+            <div class="footer-divider"></div>
+    
+            <!-- Columna Derecha: Ubicación y Redes Sociales -->
+            <div class="footer-location">
+                <h3>📍 Nuestra Ubicación</h3>
+                <p>Calle 123, Ciudad, País</p>
+                <div class="mini-mapa">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.5745019578744!2d-77.03652998563668!3d-12.046373491469842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c87d5d0c1f5b%3A0x107d9b9d79e1eb47!2sPlaza%20Mayor%20Lima!5e0!3m2!1ses-419!2spe!4v1648524670114!5m2!1ses-419!2spe" 
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Spa & Uñas - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

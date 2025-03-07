@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5dc; /* Fondo pastel */
+}
+
+/* Contenedor principal */
+.login-wrapper {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Contenedor del formulario */
+.login-container {
+    width: 40%;
+    background: linear-gradient(135deg, #7ebc89, #98d9a3); /* Verde pastel */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Contenedor de los botones en columna */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Para que los botones estén en columna */
+    align-items: center; /* Para centrar los botones */
+    width: 100%;
+}
+
+/* Espaciado entre los botones */
+#regresarButton {
+    margin-top: 15px; /* Separa el botón "Regresar" del de "Iniciar Sesión" */
+}
+
+/* Botones */
+.login-container button {
+    width: 85%;
+    padding: 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* Color al pasar el mouse */
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+/* Contenedor de la imagen */
+.login-image {
+    width: 60%;
+    background: url('../Img/Fondo-Login.png') center/cover no-repeat;
+}
+
+/* Efecto al pasar el mouse */
+.login-container:hover {
+    transform: scale(1.1);
+    width: 55%;
+}
+
+/* Reducir la imagen al mismo tiempo */
+.login-container:hover ~ .login-image {
+    width: 45%;
+}

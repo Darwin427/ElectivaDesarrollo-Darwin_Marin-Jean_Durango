@@ -1,0 +1,717 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estilos para el nav fijo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Para que siempre esté encima de los demás elementos */
+}
+
+.logo img {
+    width: 90px;
+}
+/* Ajustar el body para que no se solape con el nav */
+body {
+    padding-top: 8%; /* Ajusta este valor si el header tiene otra altura */
+}
+
+/* Estilos del nav en escritorio */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Animación al pasar el mouse */
+nav ul li a:hover {
+    transform: scale(1.1);
+    background-color: #07D9B2;
+    color: white;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    background-color: #07D9B2;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* 📱 Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px; /* ✅ Define la altura total del carrusel */
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1200px; /* ✅ Ajusta el ancho máximo */
+    height: 420px; /* ✅ Debe coincidir con la altura del carrusel */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 100%; /* ✅ Se ajusta dinámicamente según la cantidad de imágenes */
+    height: 100%; /* ✅ Asegura que ocupe toda la altura */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* ✅ Cada imagen ocupa el 100% del carrusel */
+    height: 100%; /* ✅ Hace que cada imagen llene toda la altura disponible */
+    overflow: hidden; /* ✅ Evita espacios en blanco o cortes raros */
+}
+
+.carousel-item img {
+    width: 1000px; /* ✅ Hace que la imagen ocupe todo el ancho */
+    height: 420px; /* ✅ Hace que la imagen ocupe toda la altura */
+    object-fit: cover; /* ✅ Ajusta la imagen para llenar el espacio sin deformarse */
+}
+
+.carousel-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-btn {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background-color: white;
+}
+
+
+
+/* Sección "Nuestros Servicios" */
+#nuestros-servicios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #EAF8F6;
+}
+
+#nuestros-servicios h2 {
+    font-size: 2rem;
+    color: #04D99D;
+    margin-bottom: 20px;
+}
+
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicio {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.servicio:hover {
+    transform: scale(1.1);
+}
+
+.servicio img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.servicio h3 {
+    color: #07D9B2;
+    margin: 15px 0;
+}
+
+.servicio p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.servicio button {
+    background: #07D9B2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.servicio button:hover {
+    background: #04D99D;
+}
+
+@media (max-width: 768px) {
+    .servicios-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* Sección "Pedir Cita" */
+#cita {
+    width: 60%;
+    margin: 70px auto;
+    background-color: white;  
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 4px solid #07D9B2; 
+}
+
+h2 {
+    text-align: center;
+    color: #07D9B2; 
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Distribución en filas */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;  /* Más espacio entre los grupos */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 48%;
+}
+
+/* Etiquetas */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #04D99D; 
+}
+
+/* Inputs y Select */
+input, select {
+    width: 95%;
+    padding: 10px;
+    border: 2px solid #04D99D;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fefefe;
+    color: #333;
+    transition: 0.3s ease-in-out;  /* Suaviza el cambio de borde */
+}
+
+/* Efecto al enfocar */
+input:focus, select:focus {
+    outline: none;
+    border-color: #04D99D; /* Resalta el input seleccionado */
+    box-shadow: 0 0 8px rgba(4, 217, 157, 0.5);
+}
+
+/* Menú de selección personalizado */
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #07D9B2;
+    border-radius: 10px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Flecha personalizada */
+.custom-select::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #04D99D;
+    pointer-events: none;
+}
+
+/* Hover y Focus */
+.custom-select select:hover {
+    border-color: #04D99D;
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: #04D99D;
+    background-color: #fff;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #07D9B2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #04D99D;
+}
+
+/* 📱 Ajustes Responsivos */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column; /* Coloca los inputs en una sola columna */
+        gap: 10px;
+    }
+
+    .form-group {
+        width: 100%; /* Ocupa el ancho completo */
+    }
+
+    #cita {
+        width: 90%; /* Más adaptable en pantallas pequeñas */
+    }
+}
+
+
+
+
+
+/* Sección "Nuestras Dueñas" */
+#dueñas {
+    text-align: center;
+    padding: 50px 40px;
+    background-color: #f4f4f4;
+}
+
+#dueñas h2 {
+    font-size: 2rem;
+    color: #07D9B2;
+    margin-bottom: 30px;
+}
+
+.dueñas-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dueña {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 270px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dueña:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dueña img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.dueña h3 {
+    color: #07D9B2;
+    margin-bottom: 10px;
+}
+
+.dueña p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #07D9B2;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #F28F16;
+}
+
+/* 📱 Ajustes Responsivos */
+@media (max-width: 768px) {
+    .dueñas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}   
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .servicios-container, .dueñas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+/* Sección Nuestra Ubicación */
+#ubicacion {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #EAF8F6;
+}
+
+#ubicacion h2 {
+    font-size: 2rem;
+    color: #04D99D;
+    margin-bottom: 30px;
+}
+
+/* Contenedor principal */
+.ubicacion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 2000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* Estilos del mapa */
+.mapa iframe {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Estilos de los datos */
+.datos {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 500px;
+
+}
+
+.datos h3 {
+    color: #07D9B2;
+    margin-bottom: 15px;
+}
+
+.datos p {
+    color: #555;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.btn-mapa {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #07D9B2;
+    color: white;
+    font-size: 16px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-mapa:hover {
+    background-color: #04D99D;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+    .ubicacion-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .datos {
+        width: 100%;
+    }
+}
+
+
+
+/* Sección Preguntas Frecuentes */
+#preguntas-frecuentes {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #EAF8F6;
+}
+
+#preguntas-frecuentes h2 {
+    font-size: 2rem;
+    color: #04D99D;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de preguntas */
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Pregunta */
+.faq {
+    background: white;
+    border-radius: 25px;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #07D9B2;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación de expansión */
+.faq:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Respuesta (oculta por defecto) */
+.respuesta {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    background-color: white;
+    color: #07D9B2;
+    padding: 0 15px;
+    border-radius: 0 0 25px 25px;
+    font-weight: normal;
+}
+
+/* Mostrar respuesta al hacer hover */
+.faq:hover .respuesta {
+    max-height: 100px;
+    opacity: 1;
+    padding: 15px; /* Se agrega padding cuando aparece */
+}
+
+@media (max-width: 768px) {
+    .faq-container {
+        grid-template-columns: 1fr; /* Se vuelve una columna */
+    }
+}
+
+
+
+/* Estilos Footer */
+footer {
+    background: #EAF8F6;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+    padding-bottom: 20px;
+}
+
+/* Estilos generales para las columnas */
+.footer-info,
+.footer-location {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-info h3,
+.footer-location h3 {
+    color: #07D9B2;
+    margin-bottom: 10px;
+}
+
+.footer-info p,
+.footer-location p {
+    color: #555;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Línea divisoria entre columnas */
+.footer-divider {
+    width: 2px;
+    background: #07D9B2;
+    height: 200px;
+}
+
+/* Estilos para el mapa */
+.mini-mapa iframe {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Redes sociales */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #07D9B2;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #F28F16;
+}
+
+/* Línea de derechos de autor */
+.footer-copy {
+    margin-top: 20px;
+    color: #07D9B2;
+    font-size: 0.9rem;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-divider {
+        display: none; /* Oculta la línea en móviles */
+    }
+
+    .footer-info,
+    .footer-location {
+        text-align: center;
+    }
+}
