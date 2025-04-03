@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Spa</title>
+    <title>Login - Spa de Bienestar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styleLogin.css">
 </head>
 <body>
     <div class="login-wrapper">
-        <!-- Contenedor del formulario -->
         <div class="login-container">
             <h2>Iniciar Sesión</h2>
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Documento">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Contraseña">
-            <button id="loginButton">Iniciar Sesión</button>
-            <button id="regresarButton">Regresar</button>
+            
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Nombre" required>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-id-card"></i>
+                <input type="text" placeholder="Documento" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Contraseña" required>
+            </div>
+
+            <button id="loginButton" class="btn-primary">
+                <span id="loginText">Iniciar Sesión</span>
+                <div id="loginSpinner" class="spinner"></div>
+            </button>
+            
+            <button id="regresarButton" class="btn-secondary">
+                Regresar
+            </button>
+            <a href="../Registro/Registro.html" class="register-link">
+                ¿Aún no tienes una cuenta? Regístrate
+            </a>
         </div>
 
-        <!-- Contenedor de la imagen -->
         <div class="login-image"></div>
+        <script src="Login.js"></script>
     </div>
-
-    <script src="Login.js"></script>
-</body>
-</html>

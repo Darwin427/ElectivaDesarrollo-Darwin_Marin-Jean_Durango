@@ -4,46 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Spa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styleRegistro.css">
 </head>
 <body>
+    <div class="floating-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+    </div>
 
     <div class="registro-wrapper">
-        <!-- Contenedor del formulario -->
         <div class="registro-container">
-            <h2>Registro</h2>
-            <form>
-                <div class="input-group">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellido" required>
-                </div>
-                <input type="text" placeholder="Documento" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Contraseña" required>
-                <input type="password" placeholder="Confirmar Contraseña" required>
+            <h2>Crear Cuenta</h2>
+            
+            <div class="form-columns">
+                <div class="column-left">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Apellido" required>
+                    </div>
 
-                <!-- Selección de género -->
-                <div class="genero">
-                    <label>
-                        <input type="radio" name="genero" value="masculino" required>
+                    <div class="input-group">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" placeholder="Documento" required>
+                    </div>
+                </div>
+
+                <div class="column-right">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirmar Contraseña" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="genero">
+                <label>
+                    <input type="radio" name="genero" value="masculino" required>
+                    <div class="gender-option">
                         <img src="../Img/Imagen-GeneroHombre.png" alt="Masculino">
-                    </label>
-                    <label>
-                        <input type="radio" name="genero" value="femenino" required>
+                        <span>Hombre</span>
+                    </div>
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="femenino" required>
+                    <div class="gender-option">
                         <img src="../Img/Imagen-GeneroMujer.png" alt="Femenino">
-                    </label>
-                </div>
+                        <span>Mujer</span>
+                    </div>
+                </label>
+            </div>
 
-                <div class="button-container">
-                    <button type="submit">Registrarme</button>
-                    <button id="regresarButton">Regresar</button>
+            <div class="button-container">
+                <button id="registrarButton" class="btn-primary">
+                    Registrarme
+                </button>
+                
+                <div class="secondary-buttons">
+                    <button id="regresarButton" class="btn-secondary">
+                        Regresar
+                    </button>
+                    <a href="../Login/Login.html" class="login-link">¿Ya tienes una cuenta?</a>
                 </div>
-            </form>
+            </div>
         </div>
 
-        <!-- Contenedor de la imagen -->
         <div class="registro-image"></div>
     </div>
 
+    <script src="Registro.js"></script>
 </body>
 </html>
